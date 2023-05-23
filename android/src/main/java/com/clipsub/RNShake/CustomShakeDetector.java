@@ -28,9 +28,9 @@ public class CustomShakeDetector implements SensorEventListener {
           TimeUnit.NANOSECONDS.convert(20, TimeUnit.MILLISECONDS);
   // Number of nanoseconds to listen for and count shakes (nanoseconds)
   private static final float SHAKING_WINDOW_NS = TimeUnit.NANOSECONDS.convert(3, TimeUnit.SECONDS);
-  // Required force to constitute a rage shake. Need to multiply gravity by 1.33 because a rage
+  // Required force to constitute a rage shake. Multiply gravity by 1.1 because a rage
   // shake in one direction should have more force than just the magnitude of free fall.
-  private static final float REQUIRED_FORCE = SensorManager.GRAVITY_EARTH * 1.33f;
+  private static final float REQUIRED_FORCE = SensorManager.GRAVITY_EARTH * 1.1f;
 
   private float mAccelerationX, mAccelerationY, mAccelerationZ;
 
